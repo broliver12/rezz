@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>REZZ Glasses Emulator</title>
+  <!-- <style> body {padding: 0; margin: 0;} </style> -->
+  <link rel="stylesheet" href="controlPanel.css">
+  <script src="../p5.min.js"></script>
+  <script src="../addons/p5.dom.min.js"></script>
+  <script src="../addons/p5.sound.min.js"></script>
+
+  <!-- ////////////////////////////////Patterns/////////////////////////////// -->
+  <script src="patterns/spiral_with_sets_pattern.js" type="text/javascript"></script>
+
+  <script src="patterns/iterator_pattern.js" type="text/javascript"></script>
+
+  <script src="patterns/basic_spiral_pattern.js" type="text/javascript"></script>
+
+  <script src="patterns/enhanced_basic_spiral_pattern.js" type="text/javascript"></script>
+  <!-- /////////////////////////////////////////////////////////////////////// -->
+
+  <!-- ////////////////////////////////Managers/////////////////////////////// -->
+  <script src="PatternManager.js" type="text/javascript"></script>
+  <!-- /////////////////////////////////////////////////////////////////////// -->
+
+  <!-- /////////////////////////////Calculators/////////////////////////////// -->
+  <script src="setCalculator/centered_2_2_3_setCalculator.js" type="text/javascript"></script>
+
+  <script src="setCalculator/centered_2_3_5_setCalculator.js" type="text/javascript"></script>
+
+  <script src="setCalculator/centered_1_1_1_setCalculator.js" type="text/javascript"></script>
+
+  <script src="setCalculator/synced_outer_6_middle_4_clockwise.js" type="text/javascript"></script>
+  <!-- /////////////////////////////////////////////////////////////////////// -->
+
+  <!-- ////////////////////////////////Classes//////////////////////////////// -->
+  <script src="Pattern.js" type="text/javascript"></script>
+
+  <script src="Counter.js" type="text/javascript"></script>
+
+  <script src="timing.js" type="text/javascript"></script>
+
+  <script src="LED.js" type="text/javascript"></script>
+  <!-- /////////////////////////////////////////////////////////////////////// -->
+
+
+
+</head>
+
+<body>
+  <div id="sketchHolder" class="sketchHolder">
+    <span class="mainTitle">REZZ GLASSES EMULATOR</span>
+    <span id="sketch" class="sketch">
+    </span>
+  </div>
+  <div class="controlPanel">
+    <button class="button changePatternButton" id="changePatternButton">Click to change pattern</button>
+    <button class="button changeSpeedButton" id="changeSpeedButton">Click to change speed</button>
+    <form>
+      <select class="list changeColorList" id="changeColorList" onchange="patternManager.setColor()">
+        <option>Red</option>
+        <option>Blue</option>
+        <option>Green</option>
+        <option>Yellow</option>
+      </select>
+    </form>
+
+  </div>
+
+
+
+</body>
+
+<!-- ////////////////////////////////MAIN/////////////////////////////// -->
+<script src="sketch.js" type="text/javascript"></script>
+<!-- /////////////////////////////////////////////////////////////////////// -->
+
+</html>
