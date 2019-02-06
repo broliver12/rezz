@@ -99,3 +99,18 @@ function setTimeUnit(inputVal){
   timeUnit = 50 + 10*inputVal;
   print("setting time unit to " + timeUnit)
 }
+
+function changeSpeed(){
+  //do calculation here
+
+  var userTimeVal = document.getElementById("speedSlider").value;
+  print(userTimeVal);
+  let tu = 50 + userTimeVal;
+  let mbtu = tu*6;
+  let irtu = tu*3/2;
+  let ortu = tu;
+  basicCounter.speedChanged(tu);
+  outerRingCounter.speedChanged(ortu);
+  innerRingCounter.speedChanged(irtu);
+  middleBlockCounter.speedChanged(mbtu);
+}

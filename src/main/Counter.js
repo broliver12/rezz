@@ -12,6 +12,13 @@ class Counter {
     this.children = [];
   }
 
+  speedChanged(incrementTime){
+    this.incrementTime = incrementTime;
+    this.reset = true;
+    this.counter = 0;
+    this.startTime = 0;
+  }
+
   setDivisions(a, b, c, d) {
     this.divisions = [a, b, c, d];
   }

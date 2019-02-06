@@ -19,6 +19,7 @@ body {
 .sketchHolder{
   flex:1;
   flex-grow: 1;
+  flex-shrink: 0;
   order: 0;
   border-style: solid;
   border-color: red;
@@ -28,6 +29,7 @@ body {
   align-items: center;
   justify-content: space-evenly;
 }
+
 
 .mainTitle{
   color: green;
@@ -39,7 +41,6 @@ body {
 }
 
 .sketch{
-  flex-shrink:
   order:1;
   align-self: center;
   /* margin: auto; */
@@ -52,30 +53,96 @@ body {
 .controlPanel{
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-content: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-around;
 
 
   order: 1;
   flex:1;
 }
 
+.slideContainer{
+  order: 0;
+  margin-top:10%;
+  margin-bottom: 5%;
+  flex-basis: 50%;
 
+  display: flex;
+  align-items: center;
+}
+
+.sliderLabel{
+  order 0;
+  color:red;
+}
+
+.slider{
+  -webkit-appearance: slider-vertical;
+  color:blue;
+  height: 400px;
+
+  order: 1;
+}
 
 .button{
-  font-size: 180%
+  font-size: 180%;
 }
 
 .changePatternButton{
   order: 0;
+  margin-top:10%;
+  margin-bottom: 5%;
+  flex-basis: 50%;
   color:blue;
 }
-.changeSpeedButton{
+.changeDirectionButton{
   order: 1;
+  margin-top:5%;
+  margin-bottom: 10%;
+  flex-basis: 20%;
   color:red;
 }
 
-.changeColorList{
+.listForm{
+  display: flex;
+  flex-direction: column;
+}
+
+.changeColorListForm{
   order: 2;
+}
+
+.changePatternListForm{
+  order: 3;
+}
+
+.presetsListForm{
+  order: 4;
+}
+
+.label{
+  order:0;
+  font-size: 130%;
+  color: red;
+}
+
+.list{
+  order:1;
+}
+
+.changeColorList{
+  font-size: 130%;
+  color: green;
+}
+
+.changePatternList{
+  font-size: 130%;
+  color: blue;
+}
+
+.presetsList{
+  font-size: 130%;
+  color: orange;
 }
 /*...........................................*/

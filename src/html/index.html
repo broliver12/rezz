@@ -56,27 +56,43 @@
     </span>
   </div>
   <div class="controlPanel">
-    <button class="button changePatternButton" id="changePatternButton">Click to change pattern</button>
-    <button class="button changeSpeedButton" id="changeSpeedButton">Click to change speed</button>
-    <select class="changeColorList" id="changeColorList" onchange="patternManager.setColor()">
-      <option>Red</option>
-      <option>Blue</option>
-      <option>Green</option>
-      <option>Yellow</option>
-    </select>
 
-    <!-- <div class="select changeColorList" tabindex="1">
-      <input class="selectopt" name="test" type="radio" id="opt1" checked>
-      <label for="opt1" class="option">Oranges</label>
-      <input class="selectopt" name="test" type="radio" id="opt2">
-      <label for="opt2" class="option">Apples</label>
-      <input class="selectopt" name="test" type="radio" id="opt3">
-      <label for="opt3" class="option">Grapefruit</label>
-      <input class="selectopt" name="test" type="radio" id="opt4">
-      <label for="opt4" class="option">Bananas</label>
-      <input class="selectopt" name="test" type="radio" id="opt5">
-      <label for="opt5" class="option">Watermelon</label>
-    </div> -->
+    <form class="slideContainer">
+      <label class="sliderLabel" for="speedSlider">SELECT SPEED</label>
+      <input type="range" min="1" max="100" value="50" class="slider" id="speedSlider" onchange="changeSpeed()">
+    </form>
+
+    <button class="button changeDirectionButton" id="changeDirectionButton">Click to change speed</button>
+
+    <form class="listForm changeColorListForm">
+      <label class="label" for="changeColorList">SELECT COLOR</label>
+      <select class="list changeColorList" id="changeColorList" onchange="patternManager.setColor()">
+        <option>Red</option>
+        <option>Blue</option>
+        <option>Green</option>
+        <option>Yellow</option>
+      </select>
+    </form>
+
+    <form class="listForm changePatternListForm">
+      <label class="label" for="changePatternList">SELECT PATTERN</label>
+      <select class="list changePatternList" id="changePatternList" onchange="">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+      </select>
+    </form>
+
+    <form class="listForm presetsListForm">
+      <label class="label" for="presetsList">SELECT A PRESET</label>
+      <select class="list presetsList" id="presetsList" onchange="">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+      </select>
+    </form>
   </div>
 
 

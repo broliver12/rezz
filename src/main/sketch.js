@@ -68,12 +68,12 @@ function setup() {
 }
 
 function setupControlPanel() {
-  document.getElementById("changePatternButton").addEventListener("click", function() {
-    patternManager.changePattern();
-  });
-  document.getElementById("changeSpeedButton").addEventListener("click", function(){
-    setTimeUnit((timeUnit - 50)/10 + 10)
-  });
+  // document.getElementById("changePatternButton").addEventListener("click", function() {
+  //   patternManager.changePattern();
+  // });
+  // document.getElementById("changeSpeedButton").addEventListener("click", function(){
+  //   setTimeUnit((timeUnit - 50)/10 + 10)
+  // });
   canvas.parent('sketch');
 }
 
