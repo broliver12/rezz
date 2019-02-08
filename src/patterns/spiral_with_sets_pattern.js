@@ -24,7 +24,6 @@ function spiral_with_sets_pattern(color) {
   }
 
   for(let i=0; i < outerRingSet.length; i++){
-    //print("ors - " + outerRingSet[i]);
     leftOuterRingArray[outerRingSet[i]].color = color;
     rightOuterRingArray[outerRingSet[i]].color = color;
   }

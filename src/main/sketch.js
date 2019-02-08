@@ -32,6 +32,8 @@ let rightEyeArray;
 
 let patternManager;
 let canvas;
+
+let direction = 0;
 //Designed as:
 //01
 //23

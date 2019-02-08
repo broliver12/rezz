@@ -4,7 +4,7 @@ let outerRingSet;
 
 class PatternManager {
 
-  constructor(patterns){
+  constructor(patterns) {
     this.patterns = patterns
 
     this.currentPattern = patterns[0];
@@ -13,48 +13,39 @@ class PatternManager {
     innerRingSet = [];
     outerRingSet = [];
     setSyncPattern("default!")
-    print("things set");
-    // this.middleBlockSet = [];
-    // this.innerRingSet = [];
-    // this.outerRingSet = [];
-    // middleBlockSet=[0,1];
-    // innerRingSet=[0,1];
-    //
   }
 
-  // updateSets(mbs , irs, ors){
-  //   middleBlockSet = mbs;
-  //   innerRingSet = irs;
-  //   middleBlockSet = ors;
-  // }
-
-  setColor(){
+  setColor() {
     var colorList = document.getElementById("changeColorList");
-
     this.currentPattern.primaryColor = colorList.options[colorList.selectedIndex].text;
   }
 
-  update(){
+  update() {
     // this.updateSets()
     this.currentPattern.updatePattern();
   }
 
-  changePattern(){
+  changePattern() {
     //increments pattern
 
     middleBlockSet = [];
     innerRingSet = [];
     outerRingSet = [];
+    var patternList = document.getElementById("changePatternList");
+    var nextPatternId = patternList.options[patternList.selectedIndex].text
 
-
-    if(this.patterns[this.currentPatternNumber + 1] != undefined){
-      print("INCREMENTING")
-      this.currentPattern = this.patterns[this.currentPatternNumber + 1];
-      this.currentPatternNumber=1;
-    } else {
-      print("SETTING TO 0")
-      this.currentPattern = this.patterns[0];
-      this.currentPatternNumber =0;
+    switch (nextPatternId) {
+      case "1 - basic":
+        this.currentPatternNumber = 0;
+        this.currentPattern = this.patterns[0];
+        break;
+      case "2 - quarters":
+        this.currentPatternNumber = 1;
+        this.currentPattern = this.patterns[1];
+        break;
+      default:
+        this.currentPatternNumber = 0;
+        this.currentPattern = this.patterns[0];
     }
 
   }

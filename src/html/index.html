@@ -62,7 +62,7 @@
       <input type="range" min="1" max="100" value="50" class="slider" id="speedSlider" onchange="changeSpeed()">
     </form>
 
-    <button class="button changeDirectionButton" id="changeDirectionButton">Click to change speed</button>
+    <button class="button changeDirectionButton" id="changeDirectionButton" onclick="changeDir()">Click to change direction</button>
 
     <form class="listForm changeColorListForm">
       <label class="label" for="changeColorList">SELECT COLOR</label>
@@ -76,9 +76,9 @@
 
     <form class="listForm changePatternListForm">
       <label class="label" for="changePatternList">SELECT PATTERN</label>
-      <select class="list changePatternList" id="changePatternList" onchange="">
-        <option>1</option>
-        <option>2</option>
+      <select class="list changePatternList" id="changePatternList" onchange="patternManager.changePattern()">
+        <option>1 - basic</option>
+        <option>2 - quarters</option>
         <option>3</option>
         <option>4</option>
       </select>
@@ -101,6 +101,7 @@
 
 <!-- ////////////////////////////////MAIN/////////////////////////////// -->
 <script src="../main/sketch.js" type="text/javascript"></script>
+<script src="../main/helperFunctions.js" type="text/javascript"></script>
 <!-- /////////////////////////////////////////////////////////////////////// -->
 
 </html>

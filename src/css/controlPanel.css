@@ -79,6 +79,7 @@ body {
 
 .slider{
   -webkit-appearance: slider-vertical;
+  -webkit-appearance: reversed;
   color:blue;
   height: 400px;
 

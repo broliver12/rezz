@@ -1,15 +1,15 @@
-let timeUnit = 100;
+let timeUnit = 120;
 
-let basicCounter = new Counter(timeUnit,10);
+var basicCounter = new Counter(timeUnit,10);
 
 let middleBlockTimeUnit = timeUnit*6;
 let innerRingTimeUnit = timeUnit*3/2;
 let outerRingTimeUnit = timeUnit;
 
-let outerRingCounter = new Counter(outerRingTimeUnit, 23);
-let innerRingCounter = new Counter(innerRingTimeUnit, 15);
-let middleBlockCounter = new Counter(middleBlockTimeUnit, 3);
-let iteratorPatternCounter = new Counter(timeUnit, 44);
+var outerRingCounter = new Counter(outerRingTimeUnit, 23);
+var innerRingCounter = new Counter(innerRingTimeUnit, 15);
+var middleBlockCounter = new Counter(middleBlockTimeUnit, 3);
+var iteratorPatternCounter = new Counter(timeUnit, 44);
 //
 // outerRingCounter.setDivisions(2, 8, 14, 20);
 // innerRingCounter.setDivisions(1, 5, 9, 13);
@@ -102,14 +102,13 @@ function setTimeUnit(inputVal){
 
 function changeSpeed(){
   //do calculation here
+  var userTimeVal = document.getElementById("speedSlider").valueAsNumber;
+  var tu = 50 + 101 - userTimeVal;
+  var mbtu = tu*6;
+  var irtu = tu*3/2;
+  var ortu = tu;
 
-  var userTimeVal = document.getElementById("speedSlider").value;
-  print(userTimeVal);
-  let tu = 50 + userTimeVal;
-  let mbtu = tu*6;
-  let irtu = tu*3/2;
-  let ortu = tu;
-  basicCounter.speedChanged(tu);
+  // basicCounter.speedChanged(tu);
   outerRingCounter.speedChanged(ortu);
   innerRingCounter.speedChanged(irtu);
   middleBlockCounter.speedChanged(mbtu);
