@@ -7,5 +7,4 @@ function changeDir(){
     middleBlockCounter.resetCounter();
     innerRingCounter.resetCounter();
     outerRingCounter.resetCounter();
-    print("direciton " + direction);
 }

@@ -1,6 +1,6 @@
 let timeUnit = 120;
 
-var basicCounter = new Counter(timeUnit,10);
+// var basicCounter = new Counter(timeUnit,10);
 
 let middleBlockTimeUnit = timeUnit*6;
 let innerRingTimeUnit = timeUnit*3/2;
@@ -9,18 +9,7 @@ let outerRingTimeUnit = timeUnit;
 var outerRingCounter = new Counter(outerRingTimeUnit, 23);
 var innerRingCounter = new Counter(innerRingTimeUnit, 15);
 var middleBlockCounter = new Counter(middleBlockTimeUnit, 3);
-var iteratorPatternCounter = new Counter(timeUnit, 44);
-//
-// outerRingCounter.setDivisions(2, 8, 14, 20);
-// innerRingCounter.setDivisions(1, 5, 9, 13);
-// middleBlockCounter.setDivisions(0, 1, 2, 3);
-
-// outerRingCounter.setDivisions(2, 8, 14, 20);
-// innerRingCounter.setDivisions(1, 5, 9, 13);
-// middleBlockCounter.setDivisions(0, 1, 2, 3);
-
-// outerRingCounter.addChild(innerRingCounter);
-// outerRingCounter.addChild(middleBlockCounter);
+// var iteratorPatternCounter = new Counter(timeUnit, 44);
 
 middleBlockCounter.addChild(innerRingCounter);
 middleBlockCounter.addChild(outerRingCounter);
@@ -47,8 +36,6 @@ function setSyncPattern(syncPattern){
     middleBlockCounter.setDivisions(0, 1, 2, 3);
 
   }
-
-
 }
 
 function handleCounters(){
@@ -58,16 +45,10 @@ function handleCounters(){
   outerRingCounter.update(curTime);
   innerRingCounter.update(curTime);
   middleBlockCounter.update(curTime);
-  //iteratorPatternCounter.update(curTime);
 
 }
 
-
 function incrementSets(){
-
-  // const middleBlockSetSize = middleBlockSet.length;
-  // const innerRingSetSize = innerRingSet.length;
-  // const outerRingSetSize = outerRingSet.length;
 
   for(let i=0; i<middleBlockSet.length; i++){
     if(middleBlockSet[i]==middleBlockCounter.resetValue+1){
@@ -95,11 +76,6 @@ function incrementSets(){
 
 }
 
-function setTimeUnit(inputVal){
-  timeUnit = 50 + 10*inputVal;
-  print("setting time unit to " + timeUnit)
-}
-
 function changeSpeed(){
   //do calculation here
   var userTimeVal = document.getElementById("speedSlider").valueAsNumber;
@@ -108,7 +84,6 @@ function changeSpeed(){
   var irtu = tu*3/2;
   var ortu = tu;
 
-  // basicCounter.speedChanged(tu);
   outerRingCounter.speedChanged(ortu);
   innerRingCounter.speedChanged(irtu);
   middleBlockCounter.speedChanged(mbtu);

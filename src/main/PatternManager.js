@@ -21,18 +21,16 @@ class PatternManager {
   }
 
   update() {
-    // this.updateSets()
     this.currentPattern.updatePattern();
   }
 
   changePattern() {
-    //increments pattern
-
     middleBlockSet = [];
     innerRingSet = [];
     outerRingSet = [];
     var patternList = document.getElementById("changePatternList");
     var nextPatternId = patternList.options[patternList.selectedIndex].text
+    var curColor = this.currentPattern.primaryColor;
 
     switch (nextPatternId) {
       case "1 - basic":
@@ -48,6 +46,7 @@ class PatternManager {
         this.currentPattern = this.patterns[0];
     }
 
+    this.currentPattern.primaryColor = curColor;
   }
 
 
