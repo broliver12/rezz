@@ -19,11 +19,6 @@ class Counter {
 
   resetCounter(){
     this.reset = true;
-    if(direction==1){
-      this.counter = 0;
-    } else {
-      this.counter = 0;
-    }
     this.startTime = 0;
   }
 

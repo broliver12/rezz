@@ -64,7 +64,12 @@
       <input type="range" min="1" max="100" value="50" class="slider" id="speedSlider" onchange="changeSpeed()">
     </form>
 
-    <button class="button changeDirectionButton" id="changeDirectionButton" onclick="changeDir()">Click to change direction</button>
+    <!-- <button class="button changeDirectionButton" id="changeDirectionButton" onclick="changeDir()">Click to change direction</button> -->
+
+    <form class="changeDirectionForm">
+      <input type="radio" name="direction" value="Clockwise" onchange="changeDir()" checked> Clockwise<br>
+      <input type="radio" name="direction" value="Counter Clockwise" onchange="changeDir()"> CounterClockwise<br>
+    </form>
 
     <form class="listForm changeColorListForm">
       <label class="label" for="changeColorList">SELECT COLOR</label>
