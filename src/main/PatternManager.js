@@ -41,6 +41,10 @@ class PatternManager {
         this.currentPatternNumber = 1;
         this.currentPattern = this.patterns[1];
         break;
+      case "3 - cross":
+        this.currentPatternNumber = 2;
+        this.currentPattern = this.patterns[2];
+        break;
       default:
         this.currentPatternNumber = 0;
         this.currentPattern = this.patterns[0];

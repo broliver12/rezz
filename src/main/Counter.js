@@ -33,9 +33,6 @@ class Counter {
 
   sync() {
     for (let i = 0; i < this.children.length; i++) {
-      if(this.resetValue==3){
-        print(this.counter);
-      }
 
       this.children[i].startTime = this.curTime - this.children[i].incrementTime;
       var counterArray = [1,2,3,0];

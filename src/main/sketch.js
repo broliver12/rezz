@@ -54,9 +54,10 @@ function setup() {
   rightEyeArray = rightMiddleBlockArray.concat(rightInnerRingArray, rightOuterRingArray);
 
   //pattern = new Pattern();
-  let spiral_pattern = new Pattern(['lightgreen'], spiral_with_sets_pattern, centered_1_1_1_reflect_setCalculator);
-  let quarter_pattern = new Pattern(['blue'], spiral_with_sets_pattern, centered_2_3_5_setCalculator);
-  let patterns = [spiral_pattern, quarter_pattern];
+  let spiral_pattern = new Pattern(['red'], spiral_with_sets_pattern, centered_1_1_1_reflect_setCalculator);
+  let quarter_pattern = new Pattern(['red'], spiral_with_sets_pattern, centered_2_3_5_setCalculator);
+  let cross_pattern = new Pattern(['red'], spiral_with_sets_pattern, basicCross_setCalculator);
+  let patterns = [spiral_pattern, quarter_pattern, cross_pattern];
   patternManager = new PatternManager(patterns);
 
   setupControlPanel();

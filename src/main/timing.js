@@ -1,4 +1,4 @@
-let timeUnit = 120;
+let timeUnit = 100;
 
 // var basicCounter = new Counter(timeUnit,10);
 
@@ -30,7 +30,6 @@ function setSyncPattern(syncPattern){
 
     break;
     default:
-    print("here1");
     outerRingCounter.setDivisions(2, 8, 14, 20);
     innerRingCounter.setDivisions(1, 5, 9, 13);
     middleBlockCounter.setDivisions(0, 1, 2, 3);
