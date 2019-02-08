@@ -18,8 +18,15 @@ body {
   flex-grow: 1;
   flex-shrink: 0;
   order: 0;
-  border-style: solid;
-  border-color: red;
+
+/*
+  background-image: url("../images/Free-Seamless-Carbon-Fiber-Texture.jpg");
+  background-size:200% 200%;
+  background-position: 50% 50%; */
+
+  background-image: url("../images/rezztrees.png");
+  background-size:100% 100%;
+  background-position: 50% 50%;
 
   display: flex;
   flex-direction: column;
@@ -29,19 +36,29 @@ body {
 
 
 .mainTitle{
+  background-color: black;
   color: red;
   font-size: 200%;
   order:0;
-  margin-top: 5%
-  flex-basis: 10%;
+  margin-top: 5%;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-color:red;
+  border-style:solid;
 
 }
 
 .sketch{
   order:1;
   align-self: center;
+  padding-bottom: 0;
+  width: 700px;
+  height: 380px;
   /* margin: auto; */
   border-style: solid;
   border-color: red;
+  border-width: thick;
 }
 /*...........................................*/
