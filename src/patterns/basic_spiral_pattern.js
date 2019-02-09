@@ -1,5 +1,9 @@
 function basic_spiral_pattern() {
 
+  var color_middle = color[0];
+  var color_inner = color[1];
+  var color_outer = color[2];
+
   //middleBlockLogic()
   leftMiddleBlockArray[middleBlockCounter.counter].color = 'red';
   rightMiddleBlockArray[middleBlockCounter.counter].color = 'red';
