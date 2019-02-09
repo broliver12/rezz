@@ -19,11 +19,6 @@ body {
   flex-shrink: 0;
   order: 0;
 
-/*
-  background-image: url("../images/Free-Seamless-Carbon-Fiber-Texture.jpg");
-  background-size:200% 200%;
-  background-position: 50% 50%; */
-
   background-image: url("../images/rezztrees.png");
   background-size:100% 100%;
   background-position: 50% 50%;
@@ -58,7 +53,7 @@ body {
   height: 380px;
   /* margin: auto; */
   border-style: solid;
-  border-color: red;
+  border-color: black;
   border-width: thick;
 }
 /*...........................................*/
