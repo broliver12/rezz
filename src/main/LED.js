@@ -13,6 +13,7 @@ class LED {
   }
 
   applySelectedPatternLogic(){
+    print(color.toString());
     fill(this.color);
   }
 

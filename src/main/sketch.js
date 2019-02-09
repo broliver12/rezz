@@ -1,6 +1,6 @@
 const width = 700;
 const height = 380;
-const backgroundColor = 'silver';
+const backgroundColor = 75;
 const offColor = 'black';
 const leftEyePosition_x = 200;
 const leftEyePosition_y = 200;
@@ -54,10 +54,11 @@ function setup() {
   rightEyeArray = rightMiddleBlockArray.concat(rightInnerRingArray, rightOuterRingArray);
 
   //pattern = new Pattern();
-  let spiral_pattern = new Pattern(['red'], spiral_with_sets_pattern, centered_1_1_1_reflect_setCalculator);
-  let quarter_pattern = new Pattern(['red'], spiral_with_sets_pattern, centered_2_3_5_setCalculator);
-  let cross_pattern = new Pattern(['red'], spiral_with_sets_pattern, basicCross_setCalculator);
-  let patterns = [spiral_pattern, quarter_pattern, cross_pattern];
+  let spiral_pattern = new Pattern(['red', 'red', 'red'], spiral_with_sets_pattern, centered_1_1_1_reflect_setCalculator);
+  let quarter_pattern = new Pattern(['red', 'red', 'red'], spiral_with_sets_pattern, centered_2_3_5_setCalculator);
+  let cross_pattern = new Pattern(['red', 'red', 'red'], spiral_with_sets_pattern, basicCross_setCalculator);
+  let offset_pattern = new Pattern(['red', 'red', 'red'], spiral_with_sets_pattern, offset_1_3_5_setCalculator);
+  let patterns = [spiral_pattern, quarter_pattern, cross_pattern, offset_pattern];
   patternManager = new PatternManager(patterns);
 
   setupControlPanel();

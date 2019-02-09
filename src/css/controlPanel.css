@@ -34,12 +34,17 @@
   color:silver;
   margin-bottom: 15%;
   font-size: 180%;
+}
 
+.radioLabel{
+  order:0;
+  color:silver;
+  font-size: 180%;
 }
 
 .label{
   order:0;
-  font-size: 180%;
+  font-size: 130%;
   color: silver;
 }
 
@@ -78,17 +83,25 @@
   flex-direction: column;
 }
 
-.changeColorListForm{
+.changeMiddleColorListForm{
   order: 2;
   margin-top: 5%;
 }
 
-.changePatternListForm{
+.changeInnerColorListForm{
   order: 3;
 }
 
-.presetsListForm{
+.changeOuterColorListForm{
   order: 4;
+}
+
+.changePatternListForm{
+  order: 5;
+}
+
+.presetsListForm{
+  order: 6;
   margin-bottom: 12.5%;
 }
 

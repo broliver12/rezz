@@ -15,10 +15,7 @@ class PatternManager {
     setSyncPattern("default!")
   }
 
-  setColor() {
-    var colorList = document.getElementById("changeColorList");
-    this.currentPattern.primaryColor = colorList.options[colorList.selectedIndex].text;
-  }
+  
 
   update() {
     this.currentPattern.updatePattern();
@@ -30,7 +27,7 @@ class PatternManager {
     outerRingSet = [];
     var patternList = document.getElementById("changePatternList");
     var nextPatternId = patternList.options[patternList.selectedIndex].text
-    var curColor = this.currentPattern.primaryColor;
+    var curColor = this.currentPattern.color;
 
     switch (nextPatternId) {
       case "1 - basic":
@@ -45,12 +42,16 @@ class PatternManager {
         this.currentPatternNumber = 2;
         this.currentPattern = this.patterns[2];
         break;
+      case "4 - offset":
+        this.currentPatternNumber = 3;
+        this.currentPattern = this.patterns[3];
+        break;
       default:
         this.currentPatternNumber = 0;
         this.currentPattern = this.patterns[0];
     }
 
-    this.currentPattern.primaryColor = curColor;
+    this.currentPattern.color = curColor;
   }
 
 
