@@ -5,17 +5,15 @@ let outerRingSet;
 class PatternManager {
 
   constructor(patterns) {
-    this.patterns = patterns
+    this.patterns = patterns;
 
     this.currentPattern = patterns[0];
     this.currentPatternNumber = 0;
     middleBlockSet = [];
     innerRingSet = [];
     outerRingSet = [];
-    setSyncPattern("default!")
+    setSyncPattern("default!");
   }
-
-  
 
   update() {
     this.currentPattern.updatePattern();
@@ -45,6 +43,10 @@ class PatternManager {
       case "4 - offset":
         this.currentPatternNumber = 3;
         this.currentPattern = this.patterns[3];
+        break;
+      case "5 - reverse offset":
+        this.currentPatternNumber = 4;
+        this.currentPattern = this.patterns[4];
         break;
       default:
         this.currentPatternNumber = 0;

@@ -58,7 +58,9 @@ function setup() {
   let quarter_pattern = new Pattern(['red', 'red', 'red'], spiral_with_sets_pattern, centered_2_3_5_setCalculator);
   let cross_pattern = new Pattern(['red', 'red', 'red'], spiral_with_sets_pattern, basicCross_setCalculator);
   let offset_pattern = new Pattern(['red', 'red', 'red'], spiral_with_sets_pattern, offset_1_3_5_setCalculator);
-  let patterns = [spiral_pattern, quarter_pattern, cross_pattern, offset_pattern];
+  let ccw_offset_pattern = new Pattern(['red', 'red', 'red'], spiral_with_sets_pattern, ccw_offset_1_3_5_setCalculator);
+
+  let patterns = [spiral_pattern, quarter_pattern, cross_pattern, offset_pattern, ccw_offset_1_3_5_setCalculator];
   patternManager = new PatternManager(patterns);
 
   setupControlPanel();
