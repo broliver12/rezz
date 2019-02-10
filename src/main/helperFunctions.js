@@ -23,3 +23,11 @@ function setOuterRingColor() {
   var colorList = document.getElementById("changeColorList_outer");
   patternManager.currentPattern.color[2] = colorList.options[colorList.selectedIndex].text;
 }
+
+function generalGetNextVal(){
+
+}
+
+function generalGetPrevVal(){
+  
+}

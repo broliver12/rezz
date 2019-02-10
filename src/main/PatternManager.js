@@ -48,6 +48,10 @@ class PatternManager {
         this.currentPatternNumber = 4;
         this.currentPattern = this.patterns[4];
         break;
+      case "6 - thick cross":
+        this.currentPatternNumber = 5;
+        this.currentPattern = this.patterns[5];
+        break;
       default:
         this.currentPatternNumber = 0;
         this.currentPattern = this.patterns[0];
