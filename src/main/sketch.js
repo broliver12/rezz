@@ -1,6 +1,6 @@
 const width = 700;
 const height = 380;
-const backgroundColor = 75;
+const backgroundColor = 30;
 const offColor = 'black';
 const leftEyePosition_x = 200;
 const leftEyePosition_y = 200;
@@ -43,7 +43,7 @@ function setup() {
 
   canvas = createCanvas(width, height);
   background(backgroundColor);
-  drawGuidelines();
+  // drawGuidelines();
 
   setupLeftMiddleBlock();
   setupRightMiddleBlock();
