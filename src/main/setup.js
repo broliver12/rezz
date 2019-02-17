@@ -1,3 +1,25 @@
+function addPatterns(){
+  let spiral_pattern = new Pattern(['red', 'red', 'red'], spiral_with_sets_pattern, centered_1_1_1_reflect_setCalculator);
+  let quarter_pattern = new Pattern(['red', 'red', 'red'], spiral_with_sets_pattern, centered_2_3_5_setCalculator);
+  let cross_pattern = new Pattern(['red', 'red', 'red'], spiral_with_sets_pattern, basicCross_setCalculator);
+  let offset_pattern = new Pattern(['red', 'red', 'red'], spiral_with_sets_pattern, offset_1_3_5_setCalculator);
+  let ccw_offset_pattern = new Pattern(['red', 'red', 'red'], spiral_with_sets_pattern, ccw_offset_1_3_5_setCalculator);
+  let thickCross_pattern = new Pattern(['red', 'red', 'red'], spiral_with_sets_pattern, thickCross_setCalculator);
+  let thickCross_reverse_inner_pattern = new Pattern(['red', 'red', 'red'], spiral_with_sets_pattern, thickCross_reverse_inner_setCalculator);
+
+  let patterns = [
+    spiral_pattern,
+    quarter_pattern,
+    cross_pattern,
+    offset_pattern,
+    ccw_offset_pattern,
+    thickCross_pattern,
+    thickCross_reverse_inner_pattern
+  ];
+
+  return patterns;
+}
+
 function setupLeftMiddleBlock() {
 
   //as

@@ -1,8 +1,11 @@
 function ccw_offset_1_3_5_setCalculator() {
 
-  middleBlockSet[0] = middleBlockCounter.counter;
+  if (direction == 1) {
+    middleBlockSet[0] = middleBlockCounter.getNextVal(1);
+  } else {
+    middleBlockSet[0] = middleBlockCounter.counter;
+  }
   middleBlockSet[1] = middleBlockCounter.getOppositeVal(middleBlockSet[0]);
-
 
   innerRingSet[0] = innerRingCounter.counter;
   innerRingSet[1] = innerRingCounter.getPrevVal(1);

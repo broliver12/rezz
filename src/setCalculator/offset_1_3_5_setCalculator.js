@@ -1,8 +1,7 @@
 function offset_1_3_5_setCalculator() {
 
-  middleBlockSet[0] = middleBlockCounter.counter;
+  middleBlockSet[0] = middleBlockCounter.getNextVal(1);
   middleBlockSet[1] = middleBlockCounter.getOppositeVal(middleBlockSet[0]);
-
 
   innerRingSet[0] = innerRingCounter.counter;
   innerRingSet[1] = innerRingCounter.getNextVal(1);
@@ -21,7 +20,4 @@ function offset_1_3_5_setCalculator() {
   outerRingSet[7] = outerRingCounter.getOppositeVal(outerRingSet[2]);
   outerRingSet[8] = outerRingCounter.getOppositeVal(outerRingSet[3]);
   outerRingSet[9] = outerRingCounter.getOppositeVal(outerRingSet[4]);
-
-
-
 }

@@ -39,6 +39,13 @@ const SyncPatternEnum = {
   SIDE_SYNC: 1
 }
 
+const PresetPatternState = {
+    PRESTART: 0,
+    STARTED: 1,
+    PAUSED: 2,
+    STOPPED: 3
+  }
+
 function setup() {
 
   canvas = createCanvas(width, height);
@@ -52,18 +59,8 @@ function setup() {
 
   leftEyeArray = leftMiddleBlockArray.concat(leftInnerRingArray, leftOuterRingArray);
   rightEyeArray = rightMiddleBlockArray.concat(rightInnerRingArray, rightOuterRingArray);
-
-  //pattern = new Pattern();
-  let spiral_pattern = new Pattern(['red', 'red', 'red'], spiral_with_sets_pattern, centered_1_1_1_reflect_setCalculator);
-  let quarter_pattern = new Pattern(['red', 'red', 'red'], spiral_with_sets_pattern, centered_2_3_5_setCalculator);
-  let cross_pattern = new Pattern(['red', 'red', 'red'], spiral_with_sets_pattern, basicCross_setCalculator);
-  let offset_pattern = new Pattern(['red', 'red', 'red'], spiral_with_sets_pattern, offset_1_3_5_setCalculator);
-  let ccw_offset_pattern = new Pattern(['red', 'red', 'red'], spiral_with_sets_pattern, ccw_offset_1_3_5_setCalculator);
-  let thickCross_pattern = new Pattern(['red', 'red', 'red'], spiral_with_sets_pattern, thickCross_setCalculator);
-
-  let patterns = [spiral_pattern, quarter_pattern, cross_pattern, offset_pattern, ccw_offset_pattern, thickCross_pattern];
-  patternManager = new PatternManager(patterns);
-
+  
+  patternManager = new PatternManager(addPatterns());
   setupControlPanel();
 }
 

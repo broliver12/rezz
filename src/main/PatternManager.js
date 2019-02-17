@@ -27,35 +27,10 @@ class PatternManager {
     var nextPatternId = patternList.options[patternList.selectedIndex].text
     var curColor = this.currentPattern.color;
 
-    switch (nextPatternId) {
-      case "1 - basic":
-        this.currentPatternNumber = 0;
-        this.currentPattern = this.patterns[0];
-        break;
-      case "2 - quarters":
-        this.currentPatternNumber = 1;
-        this.currentPattern = this.patterns[1];
-        break;
-      case "3 - cross":
-        this.currentPatternNumber = 2;
-        this.currentPattern = this.patterns[2];
-        break;
-      case "4 - offset":
-        this.currentPatternNumber = 3;
-        this.currentPattern = this.patterns[3];
-        break;
-      case "5 - reverse offset":
-        this.currentPatternNumber = 4;
-        this.currentPattern = this.patterns[4];
-        break;
-      case "6 - thick cross":
-        this.currentPatternNumber = 5;
-        this.currentPattern = this.patterns[5];
-        break;
-      default:
-        this.currentPatternNumber = 0;
-        this.currentPattern = this.patterns[0];
-    }
+    var chosenPattern = parseInt(nextPatternId.charAt(0), 10) - 1;
+
+    this.currentPatternNumber = chosenPattern;
+    this.currentPattern = this.patterns[chosenPattern];
 
     this.currentPattern.color = curColor;
   }
