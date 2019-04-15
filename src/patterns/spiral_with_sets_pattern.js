@@ -1,7 +1,12 @@
 function spiral_with_sets_pattern(color) {
+
+  var color_middle = color[0];
+  var color_inner = color[1];
+  var color_outer = color[2];
+
   for(let i=0; i < middleBlockSet.length; i++){
-    leftMiddleBlockArray[middleBlockSet[i]].color = color;
-    rightMiddleBlockArray[middleBlockSet[i]].color = color;
+    leftMiddleBlockArray[middleBlockSet[i]].color = color_middle;
+    rightMiddleBlockArray[middleBlockSet[i]].color = color_middle;
   }
 
   for(let i=0; i<4; i++){
@@ -12,8 +17,8 @@ function spiral_with_sets_pattern(color) {
   }
 
   for(let i=0; i < innerRingSet.length; i++){
-    leftInnerRingArray[innerRingSet[i]].color = color;
-    rightInnerRingArray[innerRingSet[i]].color = color;
+    leftInnerRingArray[innerRingSet[i]].color = color_inner;
+    rightInnerRingArray[innerRingSet[i]].color = color_inner;
   }
 
   for(let i=0; i<16; i++){
@@ -24,9 +29,8 @@ function spiral_with_sets_pattern(color) {
   }
 
   for(let i=0; i < outerRingSet.length; i++){
-    //print("ors - " + outerRingSet[i]);
-    leftOuterRingArray[outerRingSet[i]].color = color;
-    rightOuterRingArray[outerRingSet[i]].color = color;
+    leftOuterRingArray[outerRingSet[i]].color = color_outer;
+    rightOuterRingArray[outerRingSet[i]].color = color_outer;
   }
 
   for(let i=0; i<24; i++){

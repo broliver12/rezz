@@ -8,12 +8,9 @@ class LED {
   }
 
   drawLED(){
-    this.applySelectedPatternLogic();
-    ellipse(this.xpos,this.ypos,ledSize,ledSize);
-  }
-
-  applySelectedPatternLogic(){
+    stroke(1);
     fill(this.color);
+    ellipse(this.xpos,this.ypos,ledSize,ledSize);
+    noStroke();
   }
-
 }
