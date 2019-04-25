@@ -57,10 +57,6 @@
 
 /*//////////FORMS////////////////*/
 
-.listForm {
-  flex-basis: 17;
-}
-
 .changeDirectionForm {
   order: 1;
   flex-basis: 20%;
@@ -76,6 +72,7 @@
 }
 
 .listForm {
+  flex-basis: 17;
   display: flex;
   flex-direction: column;
 }

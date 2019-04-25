@@ -55,13 +55,10 @@
 }
 
 /*//////////FORMS////////////////*/
-.listForm {
-  flex-basis: 17;
-}
-
 .changeDirectionForm {
   order: 1;
-  flex-basis: 20%;
+  flex-basis: 15%;
+  margin-bottom: 5%;
   color: red;
   display: flex;
   flex-direction: column;
@@ -76,12 +73,14 @@
 
 .listForm {
   display: flex;
+  flex-basis: 15%;
+  flex-shrink: 1;
   flex-direction: column;
 }
 
 .changeMiddleColorListForm {
   order: 2;
-  margin-top: 10%;
+  margin-top: 5%;
 }
 
 .changeInnerColorListForm {
@@ -107,15 +106,15 @@
 }
 
 .changeColorList {
-  font-size: 130%;
+  font-size: 100%;
 }
 
 .changePatternList {
-  font-size: 130%;
+  font-size: 100%;
 }
 
 .presetsList {
-  font-size: 130%;
+  font-size: 100%;
 }
 
 /*...........................................*/
