@@ -56,6 +56,11 @@
 }
 
 /*//////////FORMS////////////////*/
+
+.listForm {
+  flex-basis: 17;
+}
+
 .changeDirectionForm {
   order: 1;
   flex-basis: 20%;
@@ -94,7 +99,7 @@
 
 .presetsListForm {
   order: 6;
-  margin-bottom: 12.5%;
+  margin-bottom: 10%;
 }
 
 /*///////////LISTS////////////////*/
