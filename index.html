@@ -4,19 +4,23 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rezz Glasses Emulator</title>
-  <!-- <style> body {padding: 0; margin: 0;} </style> -->
-  <link rel="stylesheet" media="screen and (min-width: 1530px) and (min-height: 600px)" href="src/css/controlPanel_fullscreen.css">
-  <link rel="stylesheet" media="screen and (max-width: 1530px)" href="src/css/controlPanel_horizontal_constrict.css">
-  <link rel="stylesheet" media="screen and (max-height: 600px) and (min-width: 1530px)" href="src/css/controlPanel_vertical_constrict.css">
 
+  <title>Rezz Glasses Emulator</title>
+
+  <!-- ////////////////////////////////CSS/////////////////////////////// -->
+  <link rel="stylesheet" href="src/css/body.css">
+  <link rel="stylesheet" media="screen and (min-width: 1500px) and (min-height: 600px)" href="src/css/controlPanel_fullscreen.css">
+  <link rel="stylesheet" media="screen and (max-width: 1500px)" href="src/css/controlPanel_horizontal_constrict.css">
+  <link rel="stylesheet" media="screen and (max-height: 600px) and (min-width: 1500px)" href="src/css/controlPanel_vertical_constrict.css">
   <link rel="stylesheet" media="screen and (min-height: 600px)" href="src/css/sketch_fullscreen.css">
   <link rel="stylesheet" media="screen and (max-height: 600px)" href="src/css/sketch_vertical_constrict.css">
+  <!-- /////////////////////////////////////////////////////////////////////// -->
 
-
+  <!-- ////////////////////////////////P5 LIBRARY/////////////////////////////// -->
   <script src="p5.min.js"></script>
   <script src="addons/p5.dom.min.js"></script>
   <script src="addons/p5.sound.min.js"></script>
+  <!-- /////////////////////////////////////////////////////////////////////// -->
 
   <!-- ////////////////////////////////Patterns/////////////////////////////// -->
   <script src="src/patterns/spiral_with_sets_pattern.js" type="text/javascript"></script>
@@ -62,8 +66,6 @@
   <script src="src/main/LED.js" type="text/javascript"></script>
   <!-- /////////////////////////////////////////////////////////////////////// -->
 
-
-
 </head>
 
 <body>
@@ -88,7 +90,7 @@
     </form>
 
     <form class="listForm changeMiddleColorListForm">
-      <label class="label" for="changeColorList_middle">SELECT MIDDLE BLOCK COLOR</label>
+      <label class="listLabel" for="changeColorList_middle">SELECT MIDDLE BLOCK COLOR</label>
       <select class="list changeColorList" id="changeColorList_middle" onchange="setMiddleBlockColor()">
         <option>Red</option>
         <option>OrangeRed</option>
@@ -112,7 +114,7 @@
     </form>
 
     <form class="listForm changeInnerColorListForm">
-      <label class="label" for="changeColorList_inner">SELECT INNER RING COLOR</label>
+      <label class="listLabel" for="changeColorList_inner">SELECT INNER RING COLOR</label>
       <select class="list changeColorList" id="changeColorList_inner" onchange="setInnerRingColor()">
         <option>Red</option>
         <option>OrangeRed</option>
@@ -136,7 +138,7 @@
     </form>
 
     <form class="listForm changeOuterColorListForm">
-      <label class="label" for="changeColorList_outer">SELECT OUTER RING COLOR</label>
+      <label class="listLabel" for="changeColorList_outer">SELECT OUTER RING COLOR</label>
       <select class="list changeColorList" id="changeColorList_outer" onchange="setOuterRingColor()">
         <option>Red</option>
         <option>OrangeRed</option>
@@ -160,7 +162,7 @@
     </form>
 
     <form class="listForm changePatternListForm">
-      <label class="label" for="changePatternList">SELECT PATTERN</label>
+      <label class="listLabel" for="changePatternList">SELECT PATTERN</label>
       <select class="list changePatternList" id="changePatternList" onchange="patternManager.changePattern()">
         <option>1 - basic</option>
         <option>2 - quarters</option>
@@ -173,7 +175,7 @@
     </form>
 
     <form class="listForm presetsListForm">
-      <label class="label" for="presetsList">SELECT A PRESET</label>
+      <label class="listLabel" for="presetsList">SELECT A PRESET</label>
       <select class="list presetsList" id="presetsList" onchange="">
         <option>1</option>
         <option>2</option>
