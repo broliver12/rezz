@@ -15,6 +15,7 @@
   flex: 1;
 }
 
+/*//////////Slider////////////////*/
 .slideContainer {
   order: 0;
   margin-top: 5%;
@@ -31,19 +32,6 @@
   font-size: 100%;
 }
 
-.radioLabel {
-  order: 0;
-  color: silver;
-  margin-bottom: 3%;
-  font-size: 100%;
-}
-
-.label {
-  order: 0;
-  font-size: 100%;
-  color: silver;
-}
-
 .slider {
   -webkit-appearance: slider-horizontal;
   -webkit-appearance: reversed;
@@ -52,11 +40,8 @@
   order: 1;
 }
 
-.button {
-  font-size: 100%;
-}
-
-/*//////////FORMS////////////////*/
+/*///////////////////////////////*/
+/*//////////Change Direction////////////////*/
 .changeDirectionForm {
   order: 1;
   color: red;
@@ -64,9 +49,29 @@
   flex-direction: column;
 }
 
+.radioLabel {
+  order: 0;
+  color: silver;
+  margin-bottom: 3%;
+  font-size: 100%;
+}
+
 .radioSpan {
   order: 1;
   color: silver;
+  font-size: 100%;
+}
+
+/*/////////////////////////////////////////*/
+/*//////////Lists////////////////*/
+.listLabel {
+  order: 0;
+  font-size: 100%;
+  color: silver;
+}
+
+.list {
+  order: 1;
   font-size: 100%;
 }
 
@@ -96,21 +101,5 @@
   margin-bottom: 12.5%;
 }
 
-/*///////////LISTS////////////////*/
-.list {
-  order: 1;
-}
-
-.changeColorList {
-  font-size: 100%;
-}
-
-.changePatternList {
-  font-size: 100%;
-}
-
-.presetsList {
-  font-size: 100%;
-}
-
+/*//////////////////////////////*/
 /*...........................................*/

@@ -1,18 +1,4 @@
-html, body {
-  height: 100%;
-  margin: 0;
-}
 
-body {
-  min-height: 450px;
-  min-width: 900px;
-  max-width: 2000px;
-  max-height: 1000px;
-  display: flex;
-  justify-content: space-around;
-  align-items: stretch;
-  background: black;
-}
 
 /*..............................................*/
 .sketchHolder {
