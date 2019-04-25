@@ -1,0 +1,122 @@
+/*..............................................*/
+.controlPanel {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-around;
+  background-image: url("../images/seamless-wood-texture-free-6.jpg");
+  background-size: 100% 100%;
+  border-style: solid;
+  border-color: silver;
+  border-width: thick;
+  order: 1;
+  flex: 1;
+}
+
+.slideContainer {
+  order: 0;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  flex-basis: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sliderLabel {
+  order 0;
+  color: silver;
+  margin-bottom: 15%;
+  font-size: 180%;
+}
+
+.radioLabel {
+  order: 0;
+  color: silver;
+  font-size: 180%;
+}
+
+.label {
+  order: 0;
+  font-size: 130%;
+  color: silver;
+}
+
+.slider {
+  -webkit-appearance: slider-vertical;
+  -webkit-appearance: reversed;
+  color: silver;
+  height: 100%;
+  order: 1;
+}
+
+.button {
+  font-size: 180%;
+}
+
+/*//////////FORMS////////////////*/
+
+.listForm {
+  flex-basis: 17;
+}
+
+.changeDirectionForm {
+  order: 1;
+  flex-basis: 20%;
+  color: red;
+  display: flex;
+  flex-direction: column;
+}
+
+.radioSpan {
+  order: 1;
+  color: silver;
+  font-size: 160%;
+}
+
+.listForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.changeMiddleColorListForm {
+  order: 2;
+  margin-top: 5%;
+}
+
+.changeInnerColorListForm {
+  order: 3;
+}
+
+.changeOuterColorListForm {
+  order: 4;
+}
+
+.changePatternListForm {
+  order: 5;
+}
+
+.presetsListForm {
+  order: 6;
+  margin-bottom: 10%;
+}
+
+/*///////////LISTS////////////////*/
+.list {
+  order: 1;
+}
+
+.changeColorList {
+  font-size: 130%;
+}
+
+.changePatternList {
+  font-size: 130%;
+}
+
+.presetsList {
+  font-size: 130%;
+}
+
+/*...........................................*/
