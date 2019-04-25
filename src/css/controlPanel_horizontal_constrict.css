@@ -76,6 +76,9 @@
 }
 
 .listForm {
+  align-self: stretch;
+  margin-left: 10%;
+  margin-right: 10%;
   display: flex;
   flex-direction: column;
 }
