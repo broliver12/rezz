@@ -55,6 +55,10 @@
 }
 
 /*//////////FORMS////////////////*/
+.listForm {
+  flex-basis: 17;
+}
+
 .changeDirectionForm {
   order: 1;
   flex-basis: 20%;
