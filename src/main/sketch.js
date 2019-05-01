@@ -10,6 +10,9 @@ const innerRingRadius = 70;
 const outerRingRadius = 120;
 const middleBlockCenterOffset = 5;
 const ledSize = 20;
+var middleBlockColorId = "mbid";
+var innerRingColorId = "irid";
+var outerRingColorId = "orid";
 
 let leftMiddleBlockArray;
 let leftInnerRingArray;
@@ -59,8 +62,10 @@ function setup() {
 
   leftEyeArray = leftMiddleBlockArray.concat(leftInnerRingArray, leftOuterRingArray);
   rightEyeArray = rightMiddleBlockArray.concat(rightInnerRingArray, rightOuterRingArray);
-  
+
   patternManager = new PatternManager(addPatterns());
+  setupCustomLists();
+
   setupControlPanel();
 }
 

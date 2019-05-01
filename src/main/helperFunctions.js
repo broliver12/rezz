@@ -1,33 +1,22 @@
-function changeDir(){
-    if(direction == 1){
-      direction = 0;
-    } else {
-      direction = 1;
-    }
-    middleBlockCounter.resetCounter();
-    innerRingCounter.resetCounter();
-    outerRingCounter.resetCounter();
+function changeDir() {
+  if (direction == 1) {
+    direction = 0;
+  } else {
+    direction = 1;
+  }
+  middleBlockCounter.resetCounter();
+  innerRingCounter.resetCounter();
+  outerRingCounter.resetCounter();
 }
 
-function setMiddleBlockColor() {
-  var colorList = document.getElementById("changeColorList_middle");
-  patternManager.currentPattern.color[0] = colorList.options[colorList.selectedIndex].text;
+function setMiddleBlockColor(col) {
+  patternManager.currentPattern.color[0] = col.textContent;
 }
 
-function setInnerRingColor() {
-  var colorList = document.getElementById("changeColorList_inner");
-  patternManager.currentPattern.color[1] = colorList.options[colorList.selectedIndex].text;
+function setInnerRingColor(col) {
+  patternManager.currentPattern.color[1] = col.textContent;
 }
 
-function setOuterRingColor() {
-  var colorList = document.getElementById("changeColorList_outer");
-  patternManager.currentPattern.color[2] = colorList.options[colorList.selectedIndex].text;
-}
-
-function generalGetNextVal(){
-
-}
-
-function generalGetPrevVal(){
-  
+function setOuterRingColor(col) {
+  patternManager.currentPattern.color[2] = col.textContent;
 }
