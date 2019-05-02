@@ -111,6 +111,8 @@ function setupCustomLists() {
     a = document.createElement("DIV");
     a.setAttribute("class", "select-selected");
     a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+    a.style.backgroundColor = a.textContent;
+    a.style.color = getBestTextColorGivenBackground(a.style.backgroundColor);
     x[i].appendChild(a);
     /* For each element, create a new DIV that will contain the option list: */
     b = document.createElement("DIV");
@@ -129,16 +131,25 @@ function setupCustomLists() {
       create a new DIV that will act as an option item: */
       c = document.createElement("DIV");
       c.innerHTML = selElmnt.options[j].innerHTML;
+      c.style.backgroundColor = c.textContent;
+      c.style.color = getBestTextColorGivenBackground(c.style.backgroundColor);
+
       c.addEventListener("click", function(e) {
         /* When an item is clicked, update the original select box,
         and the selected item: */
         var y, i, k, s, h;
         s = this.parentNode.parentNode.getElementsByTagName("select")[0];
         h = this.parentNode.previousSibling;
+
         for (i = 0; i < s.length; i++) {
           if (s.options[i].innerHTML == this.innerHTML) {
+
             s.selectedIndex = i;
             h.innerHTML = this.innerHTML;
+            h.style.backgroundColor = this.style.backgroundColor;
+            h.style.color = getBestTextColorGivenBackground(this.style.backgroundColor);
+
+
             if (h.id == middleBlockColorId) {
               setMiddleBlockColor(this);
             } else if (h.id == innerRingColorId) {
@@ -146,10 +157,13 @@ function setupCustomLists() {
             } else if (h.id == outerRingColorId) {
               setOuterRingColor(this)
             }
+
             y = this.parentNode.getElementsByClassName("same-as-selected");
+
             for (k = 0; k < y.length; k++) {
               y[k].removeAttribute("class");
             }
+
             this.setAttribute("class", "same-as-selected");
             break;
           }
