@@ -34,7 +34,4 @@ class PatternManager {
 
     this.currentPattern.color = curColor;
   }
-
-
-
 }

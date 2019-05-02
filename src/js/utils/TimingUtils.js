@@ -1,18 +1,13 @@
-let timeUnit = 100;
-
-// var basicCounter = new Counter(timeUnit,10);
-
-let middleBlockTimeUnit = timeUnit*6;
-let innerRingTimeUnit = timeUnit*3/2;
-let outerRingTimeUnit = timeUnit;
-
-var outerRingCounter = new Counter(outerRingTimeUnit, 23);
-var innerRingCounter = new Counter(innerRingTimeUnit, 15);
-var middleBlockCounter = new Counter(middleBlockTimeUnit, 3);
-// var iteratorPatternCounter = new Counter(timeUnit, 44);
-
-middleBlockCounter.addChild(innerRingCounter);
-middleBlockCounter.addChild(outerRingCounter);
+function changeDir() {
+  if (direction == 1) {
+    direction = 0;
+  } else {
+    direction = 1;
+  }
+  middleBlockCounter.resetCounter();
+  innerRingCounter.resetCounter();
+  outerRingCounter.resetCounter();
+}
 
 function setSyncPattern(syncPattern){
 

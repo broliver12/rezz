@@ -20,6 +20,16 @@ function addPatterns() {
   return patterns;
 }
 
+function setupCounters() {
+  outerRingCounter = new Counter(outerRingTimeUnit, 23);
+  innerRingCounter = new Counter(innerRingTimeUnit, 15);
+  middleBlockCounter = new Counter(middleBlockTimeUnit, 3);
+  // var iteratorPatternCounter = new Counter(timeUnit, 44);
+
+  middleBlockCounter.addChild(innerRingCounter);
+  middleBlockCounter.addChild(outerRingCounter);
+}
+
 function setupLeftMiddleBlock() {
 
   //as
